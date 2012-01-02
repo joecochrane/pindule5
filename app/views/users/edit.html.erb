@@ -1,0 +1,18 @@
+<div id="dmain">	
+	<%= render :partial=>'layouts/sidebar' %>
+
+	
+	<% if rakish? %>
+		<h1>Admin Editing user</h1>
+		<%= render 'updateform' %>
+		<%= link_to 'Show', @user %> 
+	
+	<% else %>
+	
+		<h1>Editing user</h1>
+		<%= render 'updateform' %>
+		<%= link_to 'Show', @user %> 
+
+	<% end %>
+	
+</div>

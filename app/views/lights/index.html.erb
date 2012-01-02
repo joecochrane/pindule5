@@ -1,0 +1,24 @@
+<div id="dmain">	
+	<%= render :partial=>'layouts/sidebar' %>
+
+<% if rakish? %>
+<table>
+  <tr>
+    <th>Available</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lights.each do |light| %>
+  <tr>
+    <td><%= light.available %></td>  
+    <td><%= link_to 'Edit', edit_light_path(light) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<% end %>
+
+</div>

@@ -1,0 +1,13 @@
+﻿<div id="dcenter" data-id="<%= @post.id %> ">
+		
+		<span><%= @post.id %> </span>
+		<span>Waiting <%= @post.waiting %> </span><br><br>
+		<div id="out_dialogue" data-waiting="<%= @post.waiting %> ">
+		
+		<% if @post.dialogue.nil? %>
+		<% else %>
+		<%= @post.dialogue.html_safe %>
+		<% end %>
+		
+	
+	</div>

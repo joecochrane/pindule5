@@ -1,0 +1,38 @@
+body {width: 960px; background-color: #FFFFFF; }
+#dheader {position: relative; width: 960px; height: 120px; background-color: #FFFFFF; }
+#plogo {position: absolute; left: 50px; top: -20px}
+#pitch1 {position: absolute; left: 300px; top: 40px; font-family:amaze; font-size: 20px;}
+#dpitch {position: absolute; left: 600px; top: 0px; }
+#sin {position: absolute; left: 0px; top: 0px}
+#iin {position: absolute; left: 0px; top: 0px}
+
+#flash_notice {position: relative; width: 960px; height: 20px; background-color: #AAAAFF;}
+
+#homelink {position: relative; left: 0px; top: 0px}
+#dmain {position: relative; width: 960px; height: 500px; }
+#dcontent {position: absolute; top: 0px; left: 0px; width:760px; height: 500px; background-color: #00FF00; }
+#dhome {position: absolute; top: 0px; left: 0px; width:500px; height: 300px; background-color: #00FF00; 	-moz-border-radius: 40px; -webkit-border-radius: 40px; -khtml-border-radius: 40px; border-radius: 40px;}
+#ihnd {position: absolute; top: 80px; left: 90px;}
+#ihrd {position: absolute; top: 88px; left: 280px;}
+#ihout {position: absolute; top: 50px; left: 180px;}
+#ihwel {position: absolute; top: 80px; left: 140px;}
+#join {position: absolute; top: 100px; left: 110px;}
+#please_stop{position: absolute; top: 200px; left: 130px;}
+#dabout {position: absolute; top: 0px; left: 0px; width:500px; height: 300px; background-color: #00FF00; 	-moz-border-radius: 40px; -webkit-border-radius: 40px; -khtml-border-radius: 40px; border-radius: 40px;}
+#habout {padding-left: 60px; padding-top: 10px}
+.pabout {padding-left: 60px; padding-right: 50px}
+#dsidebar {position: absolute; font-size: 14px; padding-left: 10px; top: 0px; left: 650px; width: 200px; height: 350px; background-color: #00FFFF; -moz-border-radius: 40px; -webkit-border-radius: 40px; -khtml-border-radius: 40px; border-radius: 40px;}
+
+div.field, div.actions { margin-bottom: 10px; }
+ul.users { margin-top: 1em; }
+.users li { list-style: none;}
+
+#newpost {position: relative;}
+#dcenter {position: absolute; left: 300px; top:0px; width: 300px; }
+#dleft {position: absolute; left: 0px; top:0px; width: 300px;  }
+#dleft2 {position: absolute; left: 0px; top:0px; width: 300px;  }
+#dwaiting {position: absolute; left: 0px; top:100px; width: 300px; }
+#dnotwaiting{position: absolute; left: 0px; top:0px; width: 300px;  display: none;}
+#jq {position: relative; left: 0px; top:0px; width: 300px; }
+.mod {color: #007700;}
+.user {color: #000077;}

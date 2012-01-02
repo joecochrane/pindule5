@@ -1,0 +1,24 @@
+<div id="dmain">	
+	<%= render :partial=>'layouts/sidebar' %>
+	
+<div id="dhome">
+<% if rakish? %>
+  <div id='rakishathome'>Rakish at home</div>
+<% end %>
+
+<% if avail? %>
+		<% if signed_in? %>					
+				<%= link_to(image_tag("/images/newdialogue.png", :border => 0, :id => 'ihnd'), { :action => "new", :controller => :"posts" } ) %>
+						<%# if has_posts? %>
+							<%= link_to(image_tag("/images/resumedialogue.png", :border => 0, :id => "ihrd"), { :action => "mylist", :controller => :"posts" }) %> 
+						<%# end %>					
+				<% else %> 
+					<%= link_to(image_tag("/images/welcome.png", :border => 0, :id => 'ihwel'), { :action => "index", :controller => :"posts" }) %>
+				<% end %>
+	<% else %>
+		
+		<%= image_tag "/images/out.png", :id => "ihout" %> 
+		<span id='please_stop'>Office Hours: 3:00-4:00 Eastern, M-W-F</span>
+	<% end %>
+</div></div>	
+

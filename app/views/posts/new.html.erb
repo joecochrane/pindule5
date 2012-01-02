@@ -1,0 +1,14 @@
+<div id="dmain">	
+	<%= render :partial=>'layouts/sidebar' %>
+<% if avail? %>
+<h1>New post</h1>
+	<% init_dialogue %>
+	<div id="dcenter">
+		<%= $dialogue.html_safe %>
+	</div>
+	<%= render 'form' %>
+	
+	
+	<%= link_to 'Back', home_path %>
+<% end %>
+</div>

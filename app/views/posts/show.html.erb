@@ -1,0 +1,23 @@
+<div id="dmain">
+
+
+<p id="notice"><%= notice %></p>
+
+<% if @post.pub & @post.adpub %>
+
+	<p> <b>User:</b><%= @post.user_id %></p>
+
+	<p><b>Title:</b><%= @post.title %></p>
+
+	<%= render :partial=>'center2' %>
+
+<% end %>
+
+
+
+
+
+<%= link_to 'Back', posts_path %>
+
+
+</div>

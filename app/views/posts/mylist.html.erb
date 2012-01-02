@@ -1,0 +1,42 @@
+<div id="dmain">	
+	<%= render :partial=>'layouts/sidebar' %>
+
+	<% if rakish? %>	
+		<h1>Admin Waiting</h1>
+		<% if avail?  %>
+		  <div id='jqadmin'>
+		    <%= render :partial=>'adminwait' %>
+		  </div>
+	    <% end %>
+
+	<br />	
+	
+	
+	
+<% else %>
+
+
+
+	<h1>My List of Posts</h1>
+	<table>
+		<tr>		
+			<th>Title</th>
+			<th>Public</th>
+			<th></th><th></th><th></th>	
+		</tr>
+	<% @posts.each do |post| %>
+		<%	if (post.user_id == current_user.id) & (post.adpub) %>
+			<tr>				
+				<td><%= post.title %></td>				
+				<td><%= post.pub %></td>				
+				<td><%= link_to 'Show', post %></td>
+				<% if avail? %>
+					<td><%= link_to 'Edit', edit_post_path(post) %></td>
+				<% end %>
+			</tr>
+		<% end %>
+	<% end %>
+	</table>
+	<br /> 
+ <% end %>
+</div>

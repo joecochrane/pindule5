@@ -1,0 +1,33 @@
+﻿<div id="dsidebar">
+	<br /><br />
+	<%= link_to_unless_current "Front Page", pages_home_path, :id =>"homelink" %><br>
+	<%= link_to_unless_current "About", about_path %><br>
+	<%#= link_to_unless_current "Contact", contact_path %>
+	
+	<%= link_to "See Recent Public Dialogues", posts_path %><br><br>
+	
+	
+	<% if signed_in? %>
+		<span>signed in as </span><%= current_user.name %><br>
+		<% if avail? %>
+		  <%= link_to 'New Post', new_post_path %>	<br>
+		<% end %>
+		<%= link_to "List My Posts", posts_mylist_path %><br>
+		<%= link_to "Profile", current_user %><br>
+		<%= link_to "Sign out", signout_path, :method => :delete %>
+	<% else %>
+		<span>Not signed in </span><br>
+		<%= link_to "Sign in ", signin_path %><br>
+		<%= link_to "Sign up now!", signup_path %><br>
+	<% end %>
+	<br><br>
+	
+	<% if rakish? %>
+			<%= link_to "Change Availability", lights_path %><br \>
+			<%= link_to "Waiting", posts_mylist_path %><br \>
+			<%= link_to "Admin List Users", users_path %><br \>
+			
+		<% else %>
+			
+		<% end %>
+</div>

@@ -1,0 +1,13 @@
+This is a first program in Rails, so it has a lot of first program issues.  
+For instance, I wrote the program in Ruby192, had to convert to Ruby187
+to try to get it to work on dreamhost, when that didn't work, I had to
+reconvert it to Ruby192 so it would work on Heroku.
+
+Pindule is a comedy template, intended to be the web version of Dr Katz.
+Dr. Katz allows comedians to work in a structure that allows them to
+create comic material, and I tried to create the same structure with
+Pindule.
+
+As far as code, the only interesting part is the bit of ajax, which allows
+the user to have his page refreshed when the moderator sends him a chat
+reply, and the moderator has his refresh when a user enters text

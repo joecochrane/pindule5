@@ -1,0 +1,29 @@
+﻿
+<div id="jq_admin2" data-num_waiting="<%= $counter %> "></div>
+
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Title</th>
+			<th>Public</th>
+			<th>Admin Public</th>
+			<th></th><th></th>			
+		</tr>
+	<% $counter = 0 %>
+
+<% @posts.each do |post| %>
+		<% if post.waiting == true %>
+		<% $counter = $counter + 1 %>
+			<tr>
+				<td><%= post.id %></td>
+				<td><%= post.title %></td>				
+				<td><%= post.pub %></td>
+				<td><%= post.adpub %></td>
+				<td><%= link_to 'Show', post %></td>
+				<td><%= link_to 'Edit', edit_post_path(post) %></td>				
+			</tr>
+			<% end %>
+	<% end %>
+	
+	
+	</table>

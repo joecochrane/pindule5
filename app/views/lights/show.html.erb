@@ -1,0 +1,16 @@
+<div id="dmain">	
+	<%= render :partial=>'layouts/sidebar' %>
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Available:</b>
+  <%= @light.available %>
+</p>
+
+
+<%= link_to 'Edit', edit_light_path(@light) %> |
+
+
+</div>

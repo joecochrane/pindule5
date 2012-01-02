@@ -1,0 +1,22 @@
+<div id="dmain">	
+	<%= render :partial=>'layouts/sidebar' %>
+
+	
+	<% if rakish? %>
+	
+		<p id="notice"><%= notice %></p>
+			<p> <b>Name:</b>  <%= @user.name %></p>
+			<p><b>Email:</b> <%= @user.email %></p>
+			<p>  <b>Location:</b> <%= @user.location %></p>
+
+	
+	<% else %>
+	
+		<p id="notice"><%= notice %></p>
+			<p> <b>Name:</b>  <%= @user.name %></p>
+			<p><b>Email:</b> <%= @user.email %></p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> 
+<% end %>
+</div>

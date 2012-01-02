@@ -1,0 +1,10 @@
+<div id="dmain">	
+	<%= render :partial=>'layouts/sidebar' %>
+<% if rakish? %>
+  <h1>New light</h1>
+
+  <%= render 'form' %>
+
+  <%= link_to 'Back', lights_path %>
+<% end %>
+</div>

@@ -1,0 +1,14 @@
+﻿<div id="dheader">
+	<%= link_to(image_tag("/images/plogo.png", :border => 0, :id => "plogo"), { :action => "home", :controller => :"pages" } ) %> 
+		<span id=pitch1>We forgive your excesses.</span><br>
+	<div id="dpitch">
+		<%  if avail? %>
+			<%=  image_tag "/images/in.png", :id => "iin" %> 
+			
+		<%  else %>
+			<%=  image_tag "/images/out.png", :id => "iout" %> 
+			
+		<%  end %>
+	</div>
+	<br>
+</div>

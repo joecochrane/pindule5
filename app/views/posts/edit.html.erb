@@ -1,0 +1,39 @@
+<div id="dmain">	
+	<%= render :partial=>'layouts/sidebar' %>
+
+	
+<% if rakish? %>
+	<h1>Admin Editing Post</h1>
+	<% if (!@post.dialogue.nil? & !@post.clip.nil?) %>
+		<% @post.dialogue = @post.dialogue + "<br><br><span class='user'>" + @post.clip + "</span><br><br><span class='mod'></span>" %>
+		<% else %>
+			<% if !@post.dialogue.nil? %>
+				<% @post.dialogue = @post.dialogue + "<br><br><span class='mod'></span>" %>
+			<% else %>
+				<% @post.dialogue = "" %>
+		<% end %>
+	<% end %>
+	<% clear_clip %>
+	<div id="jq_admin">
+		<%= render :partial=>'center3' %>
+		
+	</div>	
+	<%= render 'form2' %>
+<% else %>
+  <% if avail? %>
+	<% set_waiting_to_true %>	
+	<% clear_clip %>
+	<div id="dnotwaiting">
+		<%= render 'form3' %>
+	</div>
+	<div id="dwaiting" >Waiting for a Reply</div> 
+	<div id="jq">
+		<%= render :partial=>'center2' %>
+	</div>
+	 
+	<% end %>
+	
+<% end %>
+
+
+</div>

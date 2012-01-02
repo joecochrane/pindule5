@@ -1,0 +1,61 @@
+<div id="dmain">	
+	<%= render :partial=>'layouts/sidebar' %>
+	
+
+<% if rakish? %>
+	<h1>Admin Listing Posts</h1>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>User</th>
+			<th>Title</th>
+			
+			<th>Pub</th>
+			<th>Adpub</th>
+			<th>Waiting</th>
+			<th></th><th></th><th></th>
+		</tr>
+	<% @posts.each do |post| %>
+		<tr>
+			<td><%= post.id %></td>
+			<td><%= post.user_id %></td>
+			<td><%= post.title %></td>
+			
+			<td><%= post.pub %></td>
+			<td><%= post.adpub %></td>
+			<td><%= post.waiting %></td>
+			<td><%= link_to 'Show', post %></td>
+			<td><%= link_to 'Edit', edit_post_path(post) %></td>
+			<td><%#= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
+		</tr>
+		<% end %>
+		</table>
+	
+<% else %>
+	<h1>Listing Public Posts</h1>
+	<table>
+		<tr>			
+			<th>User</th>
+			<th>Title</th>		
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+
+	<% @posts.each do |post| %>
+		<%	if post.pub & post.adpub  %>
+			<tr>
+				<td><%= post.user_id %></td>
+				<td><%= post.title %></td>
+				
+				<td><%= link_to 'Show', post %></td>
+				<td><%#= link_to 'Edit', edit_post_path(post) %></td>
+				<td><%#= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
+			</tr>
+		<% end %>
+	<% end %>
+	</table>
+<br />
+<% end %>
+
+</div>
