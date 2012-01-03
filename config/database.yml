@@ -22,5 +22,3 @@ production:
   adapter: postgresql
   encoding: utf8
   reconnect: false
-  database: pindule
-  pool: 5
