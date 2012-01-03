@@ -7,7 +7,7 @@ gem 'rails', '3.1.3'
 
 
 gem 'rack'
-gem 'sqlite3'
+# gem 'sqlite3'
 gem 'thin'
 gem 'eventmachine'
 gem 'heroku'
